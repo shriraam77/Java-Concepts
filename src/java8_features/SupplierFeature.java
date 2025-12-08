@@ -21,7 +21,5 @@ public class SupplierFeature {
 		};
 		
 		methodCall(alert);
-
 	}
-
 }

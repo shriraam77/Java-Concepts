@@ -27,6 +27,12 @@ public class FunctionFeature {
 			return 0;
 		};
 		
+		Function<String, ?> f2 = (n) ->
+		{
+			System.out.println("Helloo "+n);
+			return 0;
+		};
+		
 		method(f);
 		
 //2.	
@@ -34,6 +40,8 @@ public class FunctionFeature {
 		{
 			return x.length();
 		};
+		
+		//f.andThen(f2).apply("hellp");
 		
 		System.out.println( length(f1) );
 

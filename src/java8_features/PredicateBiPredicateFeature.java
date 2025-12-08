@@ -40,6 +40,10 @@ public class PredicateBiPredicateFeature {
 				return false ;
 		};
 		
+		System.out.println(p.and(p).test(3));
+		System.out.println(p.or(p).test(3));
+		System.out.println(p.negate().test(3));
+		
 		evenNumCheck(p);
 		
 		StringCompare(bp);
