@@ -51,14 +51,12 @@ public class InterviewProblems {
 	//	List answer3 = list.stream().map(n -> n.getDept()).distinct().collect(Collectors.toList()) ;
 		
 		List answer3 = list.stream().map(Student::getDept).distinct().collect(Collectors.toList()) ;
-		
 	//	System.out.println(answer3);
 		
 		
 		//4.  Find all the contact numbers
 		//List answer4 = list.stream().map(Student::getContacts).collect(Collectors.toList()) ;
 		List answer4 = list.stream().flatMap(s -> s.getContacts().stream()).collect(Collectors.toList()) ;
-		
 		//System.out.println(answer4);
 		
 		//5.  Group The Student By Department Names
@@ -66,7 +64,6 @@ public class InterviewProblems {
 	//	Map answer5 = list.stream().collect(Collectors.groupingBy(Student::getDept));
 		
 		Map answer5 = list.stream().collect(Collectors.groupingBy(Student::getDept,Collectors.counting()));
-		
 	//	System.out.println(answer5);
 		
 		
