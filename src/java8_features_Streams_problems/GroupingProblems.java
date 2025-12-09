@@ -30,7 +30,18 @@ public class GroupingProblems {
 		
 		List<String> str2 = Arrays.asList("apple","banana","apple","orange","banana","apple");
 		
-		Map<Object, Long> m1 = str2.stream().collect(Collectors.groupingBy(a -> a,Collectors.counting()));
+
+		Map<String, Long> m12 = str2.stream().collect(Collectors.groupingBy( a -> a , Collectors.counting() )) ;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+Map<Object, Long> m1 = str2.stream().collect(Collectors.groupingBy(a -> a,Collectors.counting()));
 		
 		System.out.println(m1);
 
